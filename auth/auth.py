@@ -1,7 +1,6 @@
 import jwt, datetime, time
 from auth import login
 from flask import jsonify
-from app.users.model import Users
 
 
 class Auth():
