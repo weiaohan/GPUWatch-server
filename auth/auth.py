@@ -47,7 +47,7 @@ class Auth():
         :return: list
         """
         try:
-            auth_token = jwt.decode(request.headers.get('Authorization'), "this_is_my_secret" algorithms='HS256')
+            auth_token = jwt.decode(request.headers.get('Authorization'), "this_is_my_secret",algorithms='HS256')
             if auth_token:
                 if not auth_token or auth_token['headers']['typ'] != 'JWT':
                     s = '请传递正确的验证头信息'
