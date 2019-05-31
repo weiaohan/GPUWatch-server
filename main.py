@@ -19,6 +19,7 @@ class Login(Resource):
     def post(self):
         args = parser.parse_args()
         user = login.find_user(args.email)
+        print(user)
         if user == -1:
             return -1
         elif user.pwd != args.pwd:
